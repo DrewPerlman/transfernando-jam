@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpiritController : MonoBehaviour {
+public class WispController : MonoBehaviour {
 
     public float moveSpeed = 0.05f;
 
