@@ -4,27 +4,30 @@ using UnityEngine;
 
 public class SpiritAuraScale : MonoBehaviour {
 
-    public float radius = 128f;
+    public float radius = 0.5f;
 
-	// Use this for initialization
 	void Start () {
 
 	}
 	
-	// Update is called once per frame
 	void Update () {
-        if (Input.GetKey(KeyCode.RightArrow)) {
-            radius += 0.01f;
-        }
-
-        if (Input.GetKey(KeyCode.LeftArrow)) {
-            radius -= 0.01f;
-        }
-
+        Vector3 mouseScreen = Input.mousePosition;
+        Vector2 mouse = Camera.main.ScreenToWorldPoint(mouseScreen);
+        Vector2 aura = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y);
+        Vector2 difference = mouse - aura;
+        // difference vector between the mouse and the center of the object
 
         Vector3 auraScale = transform.localScale;
-        auraScale.x = radius * 2;
-        auraScale.y = radius * 2;
+        if (difference.magnitude / 6.0f > radius) {
+
+            auraScale.x = radius / 2.0f;
+            auraScale.y = radius / 2.0f;
+        } 
+        else {
+            auraScale.x = radius * 2 - difference.magnitude / 4.0f;
+            auraScale.y = radius * 2 - difference.magnitude / 4.0f;
+        }
+
         transform.localScale = auraScale;
 
     }

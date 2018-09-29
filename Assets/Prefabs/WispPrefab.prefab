@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212371661453312170}
   - component: {fileID: 114190977639778412}
   m_Layer: 0
-  m_Name: SpiritAuraSprite
+  m_Name: WispAuraSprite
   m_TagString: aura
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -54,7 +54,7 @@ GameObject:
   - component: {fileID: 4684670791220680}
   - component: {fileID: 212306360489446000}
   m_Layer: 0
-  m_Name: SpiritCenterSprite
+  m_Name: WispSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -160,12 +160,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e389958bb8ec7274e99d6733367c7e5b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 83926f2af9e547b438831eb923a5329c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.64, y: 0.64}
+  m_Size: {x: 0.2, y: 0.2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -206,7 +206,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 51ff329b667fe8f4a92469a6ca73d5e3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 90ea70574a6944048b7f92e3e54b953b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
