@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4903430835437670}
   - component: {fileID: 114581068695616068}
   m_Layer: 0
-  m_Name: SpiritPrefab
+  m_Name: WispPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -124,6 +124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1885aec7dbcbcc841a5c4d7acaaf229d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cursor: {fileID: 0}
   moveSpeed: 0.05
 --- !u!212 &212306360489446000
 SpriteRenderer:
