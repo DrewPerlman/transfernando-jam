@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpiritAuraScale : MonoBehaviour {
+public class WispAuraScale : MonoBehaviour {
 
     public float radius = 0.5f;
 
