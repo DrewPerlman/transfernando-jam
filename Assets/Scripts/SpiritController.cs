@@ -10,17 +10,18 @@ public class SpiritController : MonoBehaviour {
 	void Start () {
 		
 	}
+    
+    // Update is called once per frame
+    void Update () {
+        FollowCursor();
+    }
 
-    void FollowCursor () {
+
+    void FollowCursor() {
         Vector3 mouseScreen = Input.mousePosition;
         Vector3 mouseWorld = Camera.main.ScreenToWorldPoint(mouseScreen);
         mouseWorld.z = 0.0f;
 
         transform.position = Vector3.Lerp(transform.position, mouseWorld, moveSpeed);
-    }
-
-    // Update is called once per frame
-    void Update () {
-        FollowCursor();
     }
 }
