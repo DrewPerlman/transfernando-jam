@@ -45,15 +45,16 @@ public class DoorSideBehavior : MonoBehaviour {
     private void OnTriggerStay2D(Collider2D collision)
     {
         if(needToPressW){
-        if (collision.CompareTag("Player") && doorOpen && Input.GetKeyDown(KeyCode.W))
-        {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            if (collision.CompareTag("Player") && doorOpen && Input.GetKeyDown(KeyCode.W))
+            {
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            }
         }
-        } else{
+        else {
             if (collision.CompareTag("Player") && doorOpen)
-        {
+            {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        }
+            }
         }
     }
 }
