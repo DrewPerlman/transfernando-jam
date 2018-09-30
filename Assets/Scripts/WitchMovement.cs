@@ -23,7 +23,7 @@ public class WitchMovement : MonoBehaviour  {
         if (!Input.GetKeyDown(KeyCode.A) && !Input.GetKeyDown(KeyCode.D))
         {
             anim.SetFloat("Speed", 0.0f);
-            Debug.Log("YAY");
+            //Debug.Log("YAY");
         }
     }
 
