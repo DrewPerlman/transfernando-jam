@@ -9,7 +9,6 @@ public class DoorSideBehavior : MonoBehaviour {
     private SpriteRenderer renderDoorOpen;
     private BoxCollider2D doorCollision;
     
-    public bool doorTransition = false;
     public bool doorOpen = false;
 
     public void OpenDoor()
@@ -44,7 +43,7 @@ public class DoorSideBehavior : MonoBehaviour {
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player") && doorOpen && doorTransition && Input.GetKeyDown(KeyCode.W))
+        if (collision.CompareTag("Player") && doorOpen && Input.GetKeyDown(KeyCode.W))
         {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }

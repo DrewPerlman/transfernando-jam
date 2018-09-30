@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4990910096532094}
   - component: {fileID: 61867108053303074}
   - component: {fileID: 114374105441237488}
-  - component: {fileID: 61010710682077188}
   m_Layer: 0
   m_Name: DoorVoidPrefab
   m_TagString: Untagged
@@ -94,39 +93,14 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1003792097455652}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.11, y: 0.73, z: 0}
-  m_LocalScale: {x: 2.47608, y: 2.47608, z: 2.47608}
+  m_LocalPosition: {x: -4.78, y: -3.09, z: 0}
+  m_LocalScale: {x: 5.7551527, y: 5.7551527, z: 5.7551527}
   m_Children:
   - {fileID: 4829097356757648}
   - {fileID: 4429751418570686}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &61010710682077188
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1003792097455652}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.26188242, y: 0.006137967}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.23072025, y: 1.2496068}
-  m_EdgeRadius: 0
 --- !u!61 &61867108053303074
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -139,7 +113,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0046173334, y: -0.013851374}
+  m_Offset: {x: -0.0024759173, y: -0.018134251}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -150,7 +124,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.4366994, y: 1.0277028}
+  m_Size: {x: 0.1411868, y: 0.33389077}
   m_EdgeRadius: 0
 --- !u!114 &114374105441237488
 MonoBehaviour:
@@ -200,7 +174,7 @@ SpriteRenderer:
   m_SortingLayerID: 757908453
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b29b37d16839a5e4aae119e626770caa, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cec68d54a528d6b4f804004b9bd79b2f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -246,7 +220,7 @@ SpriteRenderer:
   m_SortingLayerID: 757908453
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: aad5f6722fa5fc248acf18cfd7afe6f6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c3df655e597333e42aaf8c93696f9560, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
