@@ -4,8 +4,15 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - srcFire
+  - srcElectric
+  - srcWater
+  - destFire
+  - destElectric
+  - destWater
+  - wispAura
+  - wispCenter
   - Witch
-  - aura
   layers:
   - Default
   - TransparentFX

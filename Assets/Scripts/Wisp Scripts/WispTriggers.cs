@@ -2,33 +2,29 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum State { WHITE, FIRE, WATER, ELECTRIC };
+public enum WispState { WHITE, FIRE, WATER, ELECTRIC };
 
 public class WispTriggers : MonoBehaviour {
-
-
     //white, fire, electric, water 
-    public State curState;
+    public WispState curState;
     Color m_NewColor;
-    private SpriteRenderer center;
-    private SpriteRenderer aura;
+    private SpriteRenderer wispCenter;
+    private SpriteRenderer wispAura;
 
 	// Use this for initialization
 	void Start () {
-        curState = State.WHITE;
+        curState = WispState.WHITE;
         //Set the GameObjects's Color quickly to a set Color(blue)
         SpriteRenderer[] child_sprite = GetComponentsInChildren<SpriteRenderer>();
         foreach (SpriteRenderer sr in child_sprite)
         {
-            if(sr.tag == "center")
+            if(sr.tag == "wispCenter")
             {
-                Debug.Log("center");
-                center = sr;
+                wispCenter = sr;
             }
-            else if(sr.tag == "aura")
+            else if(sr.tag == "wispAura")
             {
-                Debug.Log("aura");
-                aura = sr;
+                wispAura = sr;
             }
         }
 
@@ -42,28 +38,26 @@ public class WispTriggers : MonoBehaviour {
     //other is the candle
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("triggered" + other.tag);
         //if colliding with the candle
         switch (other.tag)
         {
-
-            case "candle":
-                curState = State.FIRE;
-                center.color = Color.red;
-                aura.color = Color.red;
+            case "srcFire":
+                curState = WispState.FIRE;
+                wispCenter.color = Color.red;
+                wispAura.color = Color.red;
                 break;
-            case "electric":
-                curState = State.ELECTRIC;
-                center.color = Color.cyan;
-                aura.color = Color.cyan;
+            case "srcElectric":
+                curState = WispState.ELECTRIC;
+                wispCenter.color = Color.cyan;
+                wispAura.color = Color.cyan;
                 break;
-            case "water":
-                curState = State.WATER;
-                center.color = Color.blue;
-                aura.color = Color.blue;
+            case "srcWater":
+                curState = WispState.WATER;
+                wispCenter.color = Color.blue;
+                wispAura.color = Color.blue;
                 break;
-            case "flammable":
-                if (curState == State.FIRE)
+            case "destFire":
+                if (curState == WispState.FIRE)
                 {
                     Debug.Log("destroy");
                     Destroy(other.gameObject);
