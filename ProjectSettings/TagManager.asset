@@ -11,9 +11,9 @@ TagManager:
   - destElectric
   - destWater
   - wispAura
-  - wispCenter
   - Witch
   - destCandle
+  - button
   layers:
   - Default
   - TransparentFX
@@ -24,7 +24,7 @@ TagManager:
   - 
   - 
   - Ground
-  - 
+  - Dest
   - 
   - 
   - 

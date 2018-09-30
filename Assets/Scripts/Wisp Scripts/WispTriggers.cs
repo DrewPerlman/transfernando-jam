@@ -2,13 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum WispState { WHITE, FIRE, WATER, ELECTRIC ,desFIRE};
+public enum WispState { WHITE, FIRE, WATER, ELECTRIC };
 
 public class WispTriggers : MonoBehaviour {
     //white, fire, electric, water 
     public WispState curState;
     
-    private SpriteRenderer wispCenter;
     private SpriteRenderer wispAura;
     private Animator anim;
 
@@ -23,9 +22,7 @@ public class WispTriggers : MonoBehaviour {
         SpriteRenderer[] child_sprite = GetComponentsInChildren<SpriteRenderer>();
         foreach (SpriteRenderer sr in child_sprite)
         {
-            if(sr.tag == "wispCenter")
-                wispCenter = sr;
-            else if(sr.tag == "wispAura")
+            if(sr.tag == "wispAura")
                 wispAura = sr;
         }
         anim = GetComponent<Animator>();
@@ -33,19 +30,36 @@ public class WispTriggers : MonoBehaviour {
     // Update is called once per frame
     void Update ()
     {
-        if(Input.GetMouseButton(0))
-            curState = WispState.WHITE;
-        if (curState == WispState.WHITE)
+        if(Input.GetMouseButtonDown(0))
+		{
+			Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+			Vector2 mousePos2D = new Vector2(mousePos.x, mousePos.y);
+			RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero, Mathf.Infinity, 1 << LayerMask.NameToLayer("Dest"));
+			if (hit.collider != null)
+			{
+				Debug.Log(hit.collider.gameObject.name);
+				print("HERE2");
+				if (curState == WispState.FIRE && hit.collider.CompareTag("destFire"))
+				{
+					print("HERE");
+					hit.collider.gameObject.GetComponent<Box>().BurnBox();
+				}
+				else if (curState == WispState.ELECTRIC)
+				{
+
+				}
+			}
+			curState = WispState.WHITE;
+		}
+
+		if (curState == WispState.WHITE)
         {
             wispAura.color = Color.white;
             anim.SetBool("Fire", false);
             anim.SetBool("Electricity", false);
         }
-        //RaycastHit2D hit = Physics2D.Raycast(new Vector2(Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position).x, Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position).y), Vector2.zero, 0);
-        //if(hit)
-        //{
-        //}
-    }
+		
+	}
 
     //for the wisp
     //other is the candle
@@ -66,31 +80,28 @@ public class WispTriggers : MonoBehaviour {
                 anim.SetBool("Electricity", true);
                 anim.SetBool("Fire", false);
                 break;
-            case "srcWater":
+			/*case "srcWater":
                 curState = WispState.WATER;
                 wispAura.color = Color.blue;
-                break;
-            case "destFire":
-                if (curState == WispState.FIRE)
-                {
-                    Destroy(other.gameObject);
-                    Debug.Log("destroy");
-                    curState = WispState.WHITE;
-                }
-                break;
-            case "destWater":
+                break;*/
+			/*case "destWater":
                 if (curState == WispState.WATER)
                 {
                     Debug.Log("destroy");
                     Destroy(other.gameObject);
                     curState = WispState.ELECTRIC;
                 }
-                break;
-            case "destElectic":
-                if (curState == WispState.WATER)
+                break;*/
+			/*case "destFire":
+				if (curState == WispState.FIRE)
+				{
+					curState = WispState.WHITE;
+					other.GetComponent<Box>().BurnBox();
+				}
+				break;*/
+			case "destElectric":
+                if (curState == WispState.ELECTRIC)
                 {
-                    Debug.Log("destroy");
-                    Destroy(other.gameObject);
                     curState = WispState.ELECTRIC;
                 }
                 break;
