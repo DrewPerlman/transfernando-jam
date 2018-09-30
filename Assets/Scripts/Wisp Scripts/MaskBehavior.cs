@@ -8,7 +8,7 @@ public class MaskBehavior : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        target = GameObject.FindGameObjectWithTag("aura").transform;
+        target = GameObject.FindGameObjectWithTag("wispAura").transform;
 	}
 	
 	// Update is called once per frame
