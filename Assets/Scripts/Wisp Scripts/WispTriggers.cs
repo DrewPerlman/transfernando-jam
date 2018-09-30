@@ -17,6 +17,7 @@ public class WispTriggers : MonoBehaviour {
     // Use this for initialization
     void Start () {
         curState = WispState.WHITE;
+        Cursor.visible = false;
         //Set the GameObjects's Color quickly to a set Color(blue)
         SpriteRenderer[] child_sprite = GetComponentsInChildren<SpriteRenderer>();
         foreach (SpriteRenderer sr in child_sprite)
