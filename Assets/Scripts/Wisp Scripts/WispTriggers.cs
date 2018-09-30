@@ -82,6 +82,8 @@ public class WispTriggers : MonoBehaviour {
 				else if (curState == WispState.ELECTRIC && hit.collider.CompareTag("destElectric"))
 				{
                     hit.collider.gameObject.GetComponent<Fuseboc>().flipping = ! hit.collider.gameObject.GetComponent<Fuseboc>().flipping;
+					SetWispStateToWhite();
+					test = false;
 				}
 				else if (curState == WispState.FIRE && hit.collider.CompareTag("destCandle"))
 				{
@@ -110,9 +112,10 @@ public class WispTriggers : MonoBehaviour {
                 anim.SetBool("Electricity", false);
                 anim.SetBool("Fire", true);
 				//wispAura.enabled = false;
-				if (FindObjectOfType<SpriteMask>())
+				SpriteMask[] theSpriteMasks = FindObjectsOfType<SpriteMask>();
+				foreach (SpriteMask sm in theSpriteMasks)
 				{
-					FindObjectOfType<SpriteMask>().enabled = false;
+					sm.enabled = false;
 				}
                 break;
             case "srcElectric":
@@ -125,7 +128,12 @@ public class WispTriggers : MonoBehaviour {
                 wispAura.color = Color.cyan;
                 anim.SetBool("Electricity", true);
                 anim.SetBool("Fire", false);
-                break;
+				SpriteMask[] theSpriteMasks = FindObjectsOfType<SpriteMask>();
+				foreach (SpriteMask sm in theSpriteMasks)
+				{
+					sm.enabled = false;
+				}
+				break;
 			/*case "srcWater":
                 curState = WispState.WATER;
                 wispAura.color = Color.blue;
@@ -149,14 +157,14 @@ public class WispTriggers : MonoBehaviour {
                     SetWispStateToWhite();
 				}
 				break;
-			case "destElectric":
+			/*case "destElectric":
                 if (curState == WispState.ELECTRIC)
                 {
                     other.gameObject.GetComponent<Fuseboc>().flipping=true;
                     SetWispStateToWhite();
                     test = false;
                 }
-                break;
+                break;*/
                 //add more test cases here
 			/*case "destCandle":
 				if (curState == WispState.FIRE)
@@ -173,7 +181,10 @@ public class WispTriggers : MonoBehaviour {
 		anim.SetBool("Fire", false);
 		anim.SetBool("Electricity", false);
 		wispAura.enabled = true;
-		if (FindObjectOfType<SpriteMask>())
-			FindObjectOfType<SpriteMask>().enabled = true;
+		SpriteMask[] theSpriteMasks = FindObjectsOfType<SpriteMask>();
+		foreach (SpriteMask sm in theSpriteMasks)
+		{
+			sm.enabled = true;
+		}
 	}
 }
