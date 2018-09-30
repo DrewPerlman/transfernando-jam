@@ -37,17 +37,6 @@ public class WispTriggers : MonoBehaviour {
         anim = GetComponent<Animator>();
     }
 
-    //void OnCollisionStay(Collision2D collision)
-    //{
-    //    Debug.Log(Input.GetAxis("Mouse Y"));
-    //    Vector3 pos = transform.position;
-    //    if (circ.enabled)
-    //    {
-    //        if (Input.GetAxis("Mouse Y") < 50)
-    //            pos.y = 50;
-    //    }
-    //}
-
     // Update is called once per frame
     void Update ()
     {
@@ -59,9 +48,9 @@ public class WispTriggers : MonoBehaviour {
         if (circ.enabled && test && fireHandler)
         {
             //catches on fire, cannot go to the bottom of the screen
-            //Debug.Log(Input.GetAxis("Mouse Y"));
+
             Vector3 pos = transform.localPosition;
-            if (pos.y<= 0.15f)
+            if (pos.y<= 0.10f)
                 pos.y = 0.2f;
             transform.localPosition = pos;
         }
