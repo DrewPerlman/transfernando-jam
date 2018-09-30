@@ -27,7 +27,7 @@ public class MenuButton : MonoBehaviour {
 	}
   public void StartGame()
     {
-    	SceneManager.LoadScene(2);
+    	SceneManager.LoadScene("NewGame");
     }
     public void ExitGame()
     {
