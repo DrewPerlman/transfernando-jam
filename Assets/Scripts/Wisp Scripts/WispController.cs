@@ -8,7 +8,6 @@ public class WispController : MonoBehaviour {
     public Transform cursor;
     public float moveSpeed = 0.05f;
     private bool facingLeft = true;
-    Animator anim;
 	// Use this for initialization
 	void Start ()
     {
