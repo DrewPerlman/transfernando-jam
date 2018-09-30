@@ -20,11 +20,9 @@ public class WitchMovement : MonoBehaviour  {
     // Update is called once per frame
     private void Update()
     {
+        //Delte this and test it
         if (!Input.GetKeyDown(KeyCode.A) && !Input.GetKeyDown(KeyCode.D))
-        {
             anim.SetFloat("Speed", 0.0f);
-            Debug.Log("YAY");
-        }
     }
 
     void FixedUpdate()
@@ -47,6 +45,4 @@ public class WitchMovement : MonoBehaviour  {
         scale.x *= -1;
         transform.localScale = scale;
     }
-
-
 }
