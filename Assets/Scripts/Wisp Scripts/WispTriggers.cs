@@ -11,8 +11,13 @@ public class WispTriggers : MonoBehaviour {
     private SpriteRenderer wispAura;
     private Animator anim;
     private CircleCollider2D circ;
+    private bool test = true;
+    public bool fireHandler = false;
 
     Color m_NewColor;
+
+    //for sound
+    private GameObject sound;
 
     // Use this for initialization
     void Start ()
@@ -49,8 +54,9 @@ public class WispTriggers : MonoBehaviour {
         else
             circ.enabled = false;
 
-        if (circ.enabled)
+        if (circ.enabled && test && fireHandler)
         {
+            //catches on fire, cannot go to the bottom of the screen
             Debug.Log(Input.GetAxis("Mouse Y"));
             Vector3 pos = transform.localPosition;
             if (pos.y<= 0.15f)
@@ -128,12 +134,14 @@ public class WispTriggers : MonoBehaviour {
                     SetWispStateToWhite();
 				}
 				break;
-			/*case "destElectric":
+			case "destElectric":
                 if (curState == WispState.ELECTRIC)
                 {
-                    curState = WispState.ELECTRIC;
+                    other.gameObject.GetComponent<Fuseboc>().flipping=true;
+                    SetWispStateToWhite();
+                    test = false;
                 }
-                break;*/
+                break;
                 //add more test cases here
 			/*case "destCandle":
 				if (curState == WispState.FIRE)
