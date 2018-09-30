@@ -14,6 +14,6 @@ public class MaskBehavior : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         gameObject.transform.position = target.position;
-        gameObject.transform.localScale = target.localScale;
+        gameObject.transform.localScale = target.GetComponent<WispAuraScale>().auraScale*5f;
 	}
 }
