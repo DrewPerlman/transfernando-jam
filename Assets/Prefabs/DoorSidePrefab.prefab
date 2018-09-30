@@ -94,7 +94,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1842869606617150}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.11, y: 0.73, z: 0}
+  m_LocalPosition: {x: 8.06, y: -2.56, z: 0}
   m_LocalScale: {x: 2.47608, y: 2.47608, z: 2.47608}
   m_Children:
   - {fileID: 4657422335762894}
@@ -163,8 +163,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50714333e4d157c47b6122e873821950, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorTransition: 0
-  doorOpen: 0
+  doorOpen: 1
+  needToPressW: 0
 --- !u!212 &212221977427366340
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -197,8 +197,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 757908453
-  m_SortingLayer: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: aad5f6722fa5fc248acf18cfd7afe6f6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -243,8 +243,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 757908453
-  m_SortingLayer: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: b29b37d16839a5e4aae119e626770caa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
