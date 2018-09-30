@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum WispState { WHITE, FIRE, WATER, ELECTRIC };
+public enum WispState { WHITE, FIRE, WATER, ELECTRIC ,desFIRE};
 
 public class WispTriggers : MonoBehaviour {
     //white, fire, electric, water 
@@ -15,7 +15,8 @@ public class WispTriggers : MonoBehaviour {
     Color m_NewColor;
 
     // Use this for initialization
-    void Start () {
+    void Start ()
+    {
         curState = WispState.WHITE;
         Cursor.visible = false;
         //Set the GameObjects's Color quickly to a set Color(blue)
@@ -32,20 +33,17 @@ public class WispTriggers : MonoBehaviour {
     // Update is called once per frame
     void Update ()
     {
-        if (curState == WispState.FIRE)
+        if(Input.GetMouseButton(0))
+            curState = WispState.WHITE;
+        if (curState == WispState.WHITE)
         {
-            anim.SetBool("Electricity", false);
-            anim.SetBool("Fire", true);
-        }
-        else if (curState == WispState.WHITE)
-        {
+            wispAura.color = Color.white;
             anim.SetBool("Fire", false);
             anim.SetBool("Electricity", false);
         }
-        else if (curState == WispState.ELECTRIC)
+        RaycastHit2D hit = Physics2D.Raycast(new Vector2(Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position).x, Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position).y), Vector2.zero, 0);
+        if(hit)
         {
-            anim.SetBool("Electricity", true);
-            anim.SetBool("Fire", false);
         }
     }
 
@@ -59,10 +57,14 @@ public class WispTriggers : MonoBehaviour {
             case "srcFire":
                 curState = WispState.FIRE;
                 wispAura.color = Color.yellow;
+                anim.SetBool("Electricity", false);
+                anim.SetBool("Fire", true);
                 break;
             case "srcElectric":
                 curState = WispState.ELECTRIC;
                 wispAura.color = Color.cyan;
+                anim.SetBool("Electricity", true);
+                anim.SetBool("Fire", false);
                 break;
             case "srcWater":
                 curState = WispState.WATER;
@@ -71,8 +73,8 @@ public class WispTriggers : MonoBehaviour {
             case "destFire":
                 if (curState == WispState.FIRE)
                 {
-                    Debug.Log("destroy");
                     Destroy(other.gameObject);
+                    Debug.Log("destroy");
                     curState = WispState.WHITE;
                 }
                 break;
@@ -81,7 +83,7 @@ public class WispTriggers : MonoBehaviour {
                 {
                     Debug.Log("destroy");
                     Destroy(other.gameObject);
-                    curState = WispState.WHITE;
+                    curState = WispState.ELECTRIC;
                 }
                 break;
             case "destElectic":
