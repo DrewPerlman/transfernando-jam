@@ -63,6 +63,12 @@ public class WispTriggers : MonoBehaviour {
                     Destroy(other.gameObject);
                 }
                 break;
+			case "destCandle":
+				if (curState == WispState.FIRE)
+				{
+					other.GetComponent<Candle>().TryActivate();
+				}
+				break;
             //add more test cases here
         }
 
