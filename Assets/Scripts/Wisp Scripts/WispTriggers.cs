@@ -41,10 +41,10 @@ public class WispTriggers : MonoBehaviour {
             anim.SetBool("Fire", false);
             anim.SetBool("Electricity", false);
         }
-        RaycastHit2D hit = Physics2D.Raycast(new Vector2(Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position).x, Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position).y), Vector2.zero, 0);
-        if(hit)
-        {
-        }
+        //RaycastHit2D hit = Physics2D.Raycast(new Vector2(Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position).x, Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position).y), Vector2.zero, 0);
+        //if(hit)
+        //{
+        //}
     }
 
     //for the wisp
