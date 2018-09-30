@@ -15,13 +15,12 @@ public class WispController : MonoBehaviour {
 	}
     
     // Update is called once per frame
-    void Update () {
+    void Update ()
+    {
         FollowCursor();
-        float x = Input.mousePosition.x;
-        float halfOfScreen = Screen.width / 2;
-        if (x > halfOfScreen && facingLeft)
+        if (Input.GetAxis("Mouse X") < 0 && !facingLeft)
             Flip();
-        else if (x < halfOfScreen && !facingLeft)
+        else if (Input.GetAxis("Mouse X") > 0 && facingLeft)
             Flip();
     }
 
