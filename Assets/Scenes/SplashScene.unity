@@ -770,7 +770,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 722e4b9b54087334cbb5b035d0579f8b, type: 3}
-    m_FontSize: 62
+    m_FontSize: 58
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
@@ -783,7 +783,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "Lead Engineer - Drew Perlman\nLead Designer - Dalton Chancellor\nArt -
     Carys Gooi\nArt - Bethany Lai\nArt & Design - Selah \nDesign - Paiam Moghaddam\nEngineering
-    - Lacayo\nEngineering - Nathan \nEngineering - Bram "
+    - Gabriel Lacayo\nEngineering - Nathan \nEngineering - Bram "
 --- !u!222 &1172196666
 CanvasRenderer:
   m_ObjectHideFlags: 0
