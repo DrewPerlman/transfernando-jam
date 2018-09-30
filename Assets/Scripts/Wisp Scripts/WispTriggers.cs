@@ -59,7 +59,7 @@ public class WispTriggers : MonoBehaviour {
         if (circ.enabled && test && fireHandler)
         {
             //catches on fire, cannot go to the bottom of the screen
-            Debug.Log(Input.GetAxis("Mouse Y"));
+            //Debug.Log(Input.GetAxis("Mouse Y"));
             Vector3 pos = transform.localPosition;
             if (pos.y<= 0.15f)
                 pos.y = 0.2f;
@@ -146,7 +146,7 @@ public class WispTriggers : MonoBehaviour {
                     curState = WispState.ELECTRIC;
                 }
                 break;*/
-			case "destFire":
+			/*case "destFire":
 				if (curState == WispState.FIRE)
 				{
                     
@@ -156,7 +156,7 @@ public class WispTriggers : MonoBehaviour {
 					other.GetComponent<Box>().BurnBox();
                     SetWispStateToWhite();
 				}
-				break;
+				break;*/
 			/*case "destElectric":
                 if (curState == WispState.ELECTRIC)
                 {
