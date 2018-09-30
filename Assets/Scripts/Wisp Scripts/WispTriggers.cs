@@ -29,17 +29,37 @@ public class WispTriggers : MonoBehaviour {
         }
         anim = GetComponent<Animator>();
     }
+
+    //void OnCollisionStay(Collision2D collision)
+    //{
+    //    Debug.Log(Input.GetAxis("Mouse Y"));
+    //    Vector3 pos = transform.position;
+    //    if (circ.enabled)
+    //    {
+    //        if (Input.GetAxis("Mouse Y") < 50)
+    //            pos.y = 50;
+    //    }
+    //}
+
     // Update is called once per frame
     void Update ()
     {
-        if(curState == WispState.FIRE){
+        if(curState == WispState.FIRE)
             circ.enabled = true;
-            } else{
+        else
             circ.enabled = false;
-            }
+
+        if (circ.enabled)
+        {
+            Debug.Log(Input.GetAxis("Mouse Y"));
+            Vector3 pos = transform.localPosition;
+            if (pos.y<= 0.15f)
+                pos.y = 0.2f;
+            transform.localPosition = pos;
+        }
 
 
-        if(Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0))
 		{
 			Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 			Vector2 mousePos2D = new Vector2(mousePos.x, mousePos.y);
@@ -131,8 +151,6 @@ public class WispTriggers : MonoBehaviour {
 		anim.SetBool("Electricity", false);
 		wispAura.enabled = true;
 		if (FindObjectOfType<SpriteMask>())
-		{
 			FindObjectOfType<SpriteMask>().enabled = true;
-		}
 	}
 }
