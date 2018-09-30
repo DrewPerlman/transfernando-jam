@@ -746,8 +746,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.6, y: 11.4}
-  m_SizeDelta: {x: 1019.1, y: 551.9}
+  m_AnchoredPosition: {x: 9.7, y: -9.7}
+  m_SizeDelta: {x: 1670.7, y: 594}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1172196665
 MonoBehaviour:
@@ -781,23 +781,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'people with names
-
-    people with names
-
-    people with names
-
-    people with names
-
-    people with names
-
-    people with names
-
-    people with names
-
-    people with names
-
-    people with names'
+  m_Text: "Lead Engineer - Drew Perlman\nLead Designer - Dalton Chancellor\nArt -
+    Carys Gooi\nArt - Bethany Lai\nArt & Design - Selah \nDesign - Paiam Moghaddam\nEngineering
+    - Lacayo\nEngineering - Nathan \nEngineering - Bram "
 --- !u!222 &1172196666
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1770,8 +1756,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -310.35, y: 128.1}
-  m_SizeDelta: {x: -825.2, y: -457.1}
+  m_AnchoredPosition: {x: 25.2, y: 114.1}
+  m_SizeDelta: {x: -154.2, y: -429.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1966532948
 MonoBehaviour:
@@ -1785,7 +1771,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
