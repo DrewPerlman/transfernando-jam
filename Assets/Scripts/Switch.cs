@@ -8,6 +8,7 @@ public class Switch : MonoBehaviour {
     private SpriteRenderer button;
     public GameObject flipObject;
 	public bool isFirePlaceSwitch;
+    public float plateOffset = 0.2f;
     public GameObject firePlaceSound;
     private GameObject sound;
 
@@ -39,7 +40,7 @@ public class Switch : MonoBehaviour {
         if (collision.gameObject.tag == "Player")
         {
 
-            button.transform.Translate(0, -0.3f, 0);
+            button.transform.Translate(0, -plateOffset, 0);
             flipObject.SetActive(true);
 			if (isFirePlaceSwitch)
 			{
@@ -53,7 +54,7 @@ public class Switch : MonoBehaviour {
         //Debug.Log("out of button");
         if (collision.gameObject.tag == "Player")
         {
-            button.transform.Translate(0, 0.3f, 0);
+            button.transform.Translate(0, plateOffset, 0);
              flipObject.SetActive(false);
         }
         if (isFirePlaceSwitch)
