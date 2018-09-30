@@ -43,7 +43,7 @@ public class TextCrawl : MonoBehaviour {
 		textLocation.text = truText;
 
 		if(truText == textToWrite && timer <= 0f &&(Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space))){
-			SceneManager.LoadScene(0);
+			SceneManager.LoadScene(3);
 		}
 	}
 }
