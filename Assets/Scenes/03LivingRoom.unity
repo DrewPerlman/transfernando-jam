@@ -185,7 +185,7 @@ GameObject:
   m_Component:
   - component: {fileID: 73107717}
   - component: {fileID: 73107718}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ColoredBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -508,7 +508,7 @@ GameObject:
   - component: {fileID: 403255530}
   - component: {fileID: 403255529}
   - component: {fileID: 403255528}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BackgroundPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1032,7 +1032,7 @@ GameObject:
   - component: {fileID: 1304949530}
   - component: {fileID: 1304949532}
   - component: {fileID: 1304949531}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: WallSpriteMask
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1219,7 +1219,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1571187255}
   - component: {fileID: 1571187256}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DarkBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
