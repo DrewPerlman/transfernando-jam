@@ -457,6 +457,12 @@ Prefab:
       propertyPath: fireHandler
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114980509456133970, guid: a3526327cbd4abb4a9705edcdc776311,
+        type: 2}
+      propertyPath: sound
+      value: 
+      objectReference: {fileID: 1900829726087640, guid: 62f4e983d22048540a529dc7d420c55f,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3526327cbd4abb4a9705edcdc776311, type: 2}
   m_IsPrefabAsset: 0

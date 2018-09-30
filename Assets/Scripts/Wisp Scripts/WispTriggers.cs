@@ -17,7 +17,9 @@ public class WispTriggers : MonoBehaviour {
     Color m_NewColor;
 
     //for sound
-    private GameObject sound;
+    public GameObject toFireSound;
+    public GameObject toElectricSound;
+    public GameObject fireOutSound;
 
     // Use this for initialization
     void Start ()
@@ -98,6 +100,11 @@ public class WispTriggers : MonoBehaviour {
         switch (other.tag)
         {
             case "srcFire":
+                if(curState != WispState.FIRE)
+                {
+                   GameObject instanceSound = Instantiate(toFireSound, transform.position, Quaternion.identity);
+                   Destroy(instanceSound, 3.0f);
+                }
                 curState = WispState.FIRE;
                 wispAura.color = Color.yellow;
                 anim.SetBool("Electricity", false);
@@ -109,6 +116,11 @@ public class WispTriggers : MonoBehaviour {
 				}
                 break;
             case "srcElectric":
+                if (curState != WispState.ELECTRIC)
+                {
+                    GameObject instanceSound = Instantiate(toElectricSound, transform.position, Quaternion.identity);
+                    Destroy(instanceSound, 3.0f);
+                }
                 curState = WispState.ELECTRIC;
                 wispAura.color = Color.cyan;
                 anim.SetBool("Electricity", true);
@@ -129,7 +141,10 @@ public class WispTriggers : MonoBehaviour {
 			case "destFire":
 				if (curState == WispState.FIRE)
 				{
-					curState = WispState.WHITE;
+                    
+                    GameObject instanceSound = Instantiate(fireOutSound, transform.position, Quaternion.identity);
+                    
+                    curState = WispState.WHITE;
 					other.GetComponent<Box>().BurnBox();
                     SetWispStateToWhite();
 				}
