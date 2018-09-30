@@ -67,8 +67,11 @@ public class WispTriggers : MonoBehaviour {
                 wispAura.color = Color.yellow;
                 anim.SetBool("Electricity", false);
                 anim.SetBool("Fire", true);
-				wispAura.enabled = false;
-				FindObjectOfType<SpriteMask>().enabled = false;
+				//wispAura.enabled = false;
+				if (FindObjectOfType<SpriteMask>())
+				{
+					FindObjectOfType<SpriteMask>().enabled = false;
+				}
                 break;
             case "srcElectric":
                 curState = WispState.ELECTRIC;
@@ -117,6 +120,9 @@ public class WispTriggers : MonoBehaviour {
 		anim.SetBool("Fire", false);
 		anim.SetBool("Electricity", false);
 		wispAura.enabled = true;
-		FindObjectOfType<SpriteMask>().enabled = true;
+		if (FindObjectOfType<SpriteMask>())
+		{
+			FindObjectOfType<SpriteMask>().enabled = true;
+		}
 	}
 }
