@@ -7,6 +7,7 @@ public class Switch : MonoBehaviour {
     
     private SpriteRenderer button;
     public GameObject flipObject;
+	public bool isFirePlaceSwitch;
 
 	// Use this for initialization
 	void Start () {
@@ -38,7 +39,10 @@ public class Switch : MonoBehaviour {
 
             button.transform.Translate(0, -0.3f, 0);
             flipObject.SetActive(true);
-
+			if (isFirePlaceSwitch)
+			{
+				
+			}
         }
     }
 
