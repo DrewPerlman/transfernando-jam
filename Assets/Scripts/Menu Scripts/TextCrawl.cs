@@ -24,7 +24,7 @@ public class TextCrawl : MonoBehaviour {
 			timer -= Time.deltaTime;
 		}
 
-		if(truText != textToWrite && timer <= 0f){
+		if(truText != textToWrite && timer <= 0f && index <= textToWrite.Length){
 			truText += textToWrite[index];
 			index += 1;
 			timer = maxTimer;
@@ -38,12 +38,13 @@ public class TextCrawl : MonoBehaviour {
 		if(index == textToWrite.Length){
 			truText = textToWrite;
 			timer = maxTimer;
+			index+=1;
 		}
 
 		textLocation.text = truText;
 
 		if(truText == textToWrite && timer <= 0f &&(Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space))){
-			SceneManager.LoadScene(3);
+			SceneManager.LoadScene("01Entrance");
 		}
 	}
 }
