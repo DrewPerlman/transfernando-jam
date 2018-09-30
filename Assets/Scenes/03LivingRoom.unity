@@ -463,6 +463,24 @@ Prefab:
       value: 
       objectReference: {fileID: 1900829726087640, guid: 62f4e983d22048540a529dc7d420c55f,
         type: 2}
+    - target: {fileID: 114980509456133970, guid: a3526327cbd4abb4a9705edcdc776311,
+        type: 2}
+      propertyPath: toFireSound
+      value: 
+      objectReference: {fileID: 1900829726087640, guid: 62f4e983d22048540a529dc7d420c55f,
+        type: 2}
+    - target: {fileID: 114980509456133970, guid: a3526327cbd4abb4a9705edcdc776311,
+        type: 2}
+      propertyPath: fireOutSound
+      value: 
+      objectReference: {fileID: 1181701232747158, guid: aa97a647d02bb694cb86a14c91975a63,
+        type: 2}
+    - target: {fileID: 114980509456133970, guid: a3526327cbd4abb4a9705edcdc776311,
+        type: 2}
+      propertyPath: toElectricSound
+      value: 
+      objectReference: {fileID: 1020585870215586, guid: a14a2fa063d6e9c4fa2166b85d5b1518,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3526327cbd4abb4a9705edcdc776311, type: 2}
   m_IsPrefabAsset: 0
