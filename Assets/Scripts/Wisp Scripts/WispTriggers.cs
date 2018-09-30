@@ -128,8 +128,8 @@ public class WispTriggers : MonoBehaviour {
                 wispAura.color = Color.cyan;
                 anim.SetBool("Electricity", true);
                 anim.SetBool("Fire", false);
-				SpriteMask[] theSpriteMasks = FindObjectsOfType<SpriteMask>();
-				foreach (SpriteMask sm in theSpriteMasks)
+				SpriteMask[] theSpriteMasks2 = FindObjectsOfType<SpriteMask>();
+				foreach (SpriteMask sm in theSpriteMasks2)
 				{
 					sm.enabled = false;
 				}
