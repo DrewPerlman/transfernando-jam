@@ -6,6 +6,7 @@ public class Switch : MonoBehaviour {
 
     
     private SpriteRenderer button;
+    public GameObject flipObject;
 
 	// Use this for initialization
 	void Start () {
@@ -18,6 +19,8 @@ public class Switch : MonoBehaviour {
                 button = sr;
             }
         }
+
+        flipObject.SetActive(false);
 
     }
 	
@@ -34,6 +37,7 @@ public class Switch : MonoBehaviour {
         {
 
             button.transform.Translate(0, -0.3f, 0);
+            flipObject.SetActive(true);
 
         }
     }
@@ -44,6 +48,7 @@ public class Switch : MonoBehaviour {
         if (collision.gameObject.tag == "Player")
         {
             button.transform.Translate(0, 0.3f, 0);
+             flipObject.SetActive(false);
         }
     }
 

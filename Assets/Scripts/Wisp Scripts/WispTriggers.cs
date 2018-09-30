@@ -95,6 +95,12 @@ public class WispTriggers : MonoBehaviour {
                 }
                 break;
                 //add more test cases here
+			case "destCandle":
+				if (curState == WispState.FIRE)
+				{
+					other.GetComponent<Candle>().TryActivate();
+				}
+				break;
         }
 
     }
