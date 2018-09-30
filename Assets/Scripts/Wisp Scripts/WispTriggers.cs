@@ -32,20 +32,12 @@ public class WispTriggers : MonoBehaviour {
     void Update ()
     {
         if (curState == WispState.FIRE)
-        {
             anim.SetBool("Fire", true);
-            anim.SetBool("Water", false);
-        }
-        else if (curState == WispState.WATER)
-        {
-            anim.SetBool("Fire", false);
-            anim.SetBool("Water", true);
-        }
         else if (curState == WispState.WHITE)
-        {
             anim.SetBool("Fire", false);
-            anim.SetBool("Water", false);
-        }
+
+        //else if (curState == WispState.WATER)
+        //    anim.SetBool("Water", true);
     }
 
     //for the wisp
