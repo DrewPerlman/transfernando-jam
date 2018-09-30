@@ -364,7 +364,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4826554839995144, guid: 0b41a07b82a15ba4d812b8030303afb3, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -2.88
+      value: -3.16
       objectReference: {fileID: 0}
     - target: {fileID: 4826554839995144, guid: 0b41a07b82a15ba4d812b8030303afb3, type: 2}
       propertyPath: m_LocalPosition.z
@@ -389,16 +389,6 @@ Prefab:
     - target: {fileID: 4826554839995144, guid: 0b41a07b82a15ba4d812b8030303afb3, type: 2}
       propertyPath: m_RootOrder
       value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 50502887250477974, guid: 0b41a07b82a15ba4d812b8030303afb3,
-        type: 2}
-      propertyPath: m_GravityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 61294451263021926, guid: 0b41a07b82a15ba4d812b8030303afb3,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b41a07b82a15ba4d812b8030303afb3, type: 2}
@@ -654,36 +644,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1684723723 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1598748826956860, guid: 0b41a07b82a15ba4d812b8030303afb3,
-    type: 2}
-  m_PrefabInternal: {fileID: 656904612}
---- !u!61 &1684723730
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1684723723}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.06757021, y: -0.13987094}
-  m_SpriteTilingProperty:
-    border: {x: 0.425, y: 0.22500001, z: 0.52500004, w: 0.475}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.25, y: 1.25}
-    newSize: {x: 5.12, y: 2.56}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.41452658, y: 0.73026764}
-  m_EdgeRadius: 0
 --- !u!1 &1707289009 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1842869606617150, guid: bc6ad50b343061e448e09d391a0a99dc,
