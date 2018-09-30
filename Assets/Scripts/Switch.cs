@@ -8,6 +8,8 @@ public class Switch : MonoBehaviour {
     private SpriteRenderer button;
     public GameObject flipObject;
 	public bool isFirePlaceSwitch;
+    public GameObject firePlaceSound;
+    private GameObject sound;
 
 	// Use this for initialization
 	void Start () {
@@ -41,7 +43,7 @@ public class Switch : MonoBehaviour {
             flipObject.SetActive(true);
 			if (isFirePlaceSwitch)
 			{
-				
+                sound = Instantiate(firePlaceSound, transform.position, Quaternion.identity); ;
 			}
         }
     }
@@ -53,6 +55,10 @@ public class Switch : MonoBehaviour {
         {
             button.transform.Translate(0, 0.3f, 0);
              flipObject.SetActive(false);
+        }
+        if (isFirePlaceSwitch)
+        {
+            Destroy(sound);
         }
     }
 

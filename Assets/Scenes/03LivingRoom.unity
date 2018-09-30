@@ -161,6 +161,17 @@ Prefab:
       propertyPath: flipObject
       value: 
       objectReference: {fileID: 73578159}
+    - target: {fileID: 114017704761473774, guid: 77da6a98734c01e46a0cc32ea89f5468,
+        type: 2}
+      propertyPath: isFirePlaceSwitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114017704761473774, guid: 77da6a98734c01e46a0cc32ea89f5468,
+        type: 2}
+      propertyPath: firePlaceSound
+      value: 
+      objectReference: {fileID: 1816519831655098, guid: 11b26cc9733efe0418903ee4a1288189,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77da6a98734c01e46a0cc32ea89f5468, type: 2}
   m_IsPrefabAsset: 0
