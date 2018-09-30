@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/StartScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
@@ -14,4 +14,22 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/NewGame.unity
     guid: f03ca574e7ef0044b83b6e93db645490
+  - enabled: 1
+    path: Assets/Scenes/01Entrance.unity
+    guid: 0a9f182059629bb439bd58a26394befd
+  - enabled: 1
+    path: Assets/Scenes/02Foyer.unity
+    guid: 96b106be3d787644cb4fe518e810fcf5
+  - enabled: 1
+    path: Assets/Scenes/03LivingRoom.unity
+    guid: 448a4fcccf00b15409981975f29a0514
+  - enabled: 1
+    path: Assets/Scenes/04SecretPassage.unity
+    guid: 7863b840da322c34d81a21d7b86b106c
+  - enabled: 1
+    path: Assets/Scenes/05SpiderWebs.unity
+    guid: 2d1cfb1e77c26d141b21f5189a243420
+  - enabled: 1
+    path: Assets/Scenes/06FinalRoom.unity
+    guid: 8b5ce756c013ed84ba5f38a5bcf239f2
   m_configObjects: {}
