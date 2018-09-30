@@ -32,12 +32,20 @@ public class WispTriggers : MonoBehaviour {
     void Update ()
     {
         if (curState == WispState.FIRE)
+        {
+            anim.SetBool("Electricity", false);
             anim.SetBool("Fire", true);
+        }
         else if (curState == WispState.WHITE)
+        {
             anim.SetBool("Fire", false);
-
-        //else if (curState == WispState.WATER)
-        //    anim.SetBool("Water", true);
+            anim.SetBool("Electricity", false);
+        }
+        else if (curState == WispState.ELECTRIC)
+        {
+            anim.SetBool("Electricity", true);
+            anim.SetBool("Fire", false);
+        }
     }
 
     //for the wisp
@@ -75,7 +83,15 @@ public class WispTriggers : MonoBehaviour {
                     curState = WispState.WHITE;
                 }
                 break;
-            //add more test cases here
+            case "destElectic":
+                if (curState == WispState.WATER)
+                {
+                    Debug.Log("destroy");
+                    Destroy(other.gameObject);
+                    curState = WispState.ELECTRIC;
+                }
+                break;
+                //add more test cases here
         }
 
     }
