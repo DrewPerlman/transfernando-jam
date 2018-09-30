@@ -4,17 +4,11 @@ using UnityEngine;
 
 public class Box : MonoBehaviour {
 	Animator burnBoxAnimator;
-	bool hasBeenBurned;
 
 	// Use this for initialization
 	void Start () {
 		burnBoxAnimator = GetComponentInChildren<Animator>();
 		burnBoxAnimator.gameObject.GetComponent<SpriteRenderer>().enabled = false;
-	}
-
-	public bool getHasBeenBurned()
-	{
-		return hasBeenBurned;
 	}
 
 	public void BurnBox()
