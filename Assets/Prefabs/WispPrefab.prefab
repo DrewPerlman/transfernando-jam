@@ -180,6 +180,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   curState: 0
+  fireHandler: 0
+  toFireSound: {fileID: 1900829726087640, guid: 62f4e983d22048540a529dc7d420c55f,
+    type: 2}
+  toElectricSound: {fileID: 1020585870215586, guid: a14a2fa063d6e9c4fa2166b85d5b1518,
+    type: 2}
+  fireOutSound: {fileID: 1181701232747158, guid: aa97a647d02bb694cb86a14c91975a63,
+    type: 2}
 --- !u!114 &114984429250571026
 MonoBehaviour:
   m_ObjectHideFlags: 1
