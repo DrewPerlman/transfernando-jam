@@ -5,6 +5,7 @@ using UnityEngine;
 public class WispAuraScale : MonoBehaviour {
 
     public float radius = 0.5f;
+    public Vector3 auraScale;
 
 	void Start () {
 
@@ -17,7 +18,7 @@ public class WispAuraScale : MonoBehaviour {
         Vector2 difference = mouse - aura;
         // difference vector between the mouse and the center of the object
 
-        Vector3 auraScale = transform.localScale;
+        auraScale = transform.localScale;
         if (difference.magnitude / 6.0f > radius) {
 
             auraScale.x = radius / 2.0f;
