@@ -492,6 +492,16 @@ Prefab:
       value: 
       objectReference: {fileID: 1020585870215586, guid: a14a2fa063d6e9c4fa2166b85d5b1518,
         type: 2}
+    - target: {fileID: 61712301050160298, guid: a3526327cbd4abb4a9705edcdc776311,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 58289800555818500, guid: a3526327cbd4abb4a9705edcdc776311,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3526327cbd4abb4a9705edcdc776311, type: 2}
   m_IsPrefabAsset: 0
@@ -1433,48 +1443,88 @@ Prefab:
     - target: {fileID: 61278080210666402, guid: 3e4f5a56882fedf4bb3a91944233fcc2,
         type: 2}
       propertyPath: m_Offset.y
-      value: 1.0175626
+      value: 0.8974378
       objectReference: {fileID: 0}
     - target: {fileID: 61278080210666402, guid: 3e4f5a56882fedf4bb3a91944233fcc2,
         type: 2}
       propertyPath: m_Size.y
-      value: 1.6136699
+      value: 3.432712
       objectReference: {fileID: 0}
     - target: {fileID: 61586128100747412, guid: 3e4f5a56882fedf4bb3a91944233fcc2,
         type: 2}
       propertyPath: m_Offset.y
-      value: 0.9983556
+      value: 1.1528032
       objectReference: {fileID: 0}
     - target: {fileID: 61586128100747412, guid: 3e4f5a56882fedf4bb3a91944233fcc2,
         type: 2}
       propertyPath: m_Size.y
-      value: 1.7608523
+      value: 3.8887897
       objectReference: {fileID: 0}
     - target: {fileID: 61662489158637328, guid: 3e4f5a56882fedf4bb3a91944233fcc2,
         type: 2}
       propertyPath: m_Offset.y
-      value: 0.76926184
+      value: 0.67487764
       objectReference: {fileID: 0}
     - target: {fileID: 61662489158637328, guid: 3e4f5a56882fedf4bb3a91944233fcc2,
         type: 2}
       propertyPath: m_Size.y
-      value: 1.702663
+      value: 3.1956515
       objectReference: {fileID: 0}
     - target: {fileID: 61298448515093480, guid: 3e4f5a56882fedf4bb3a91944233fcc2,
         type: 2}
       propertyPath: m_Offset.y
-      value: 0.56368554
+      value: 0.5036236
       objectReference: {fileID: 0}
     - target: {fileID: 61298448515093480, guid: 3e4f5a56882fedf4bb3a91944233fcc2,
         type: 2}
       propertyPath: m_Size.y
-      value: 1.7113168
+      value: 3.1356628
       objectReference: {fileID: 0}
     - target: {fileID: 114098494981926330, guid: 3e4f5a56882fedf4bb3a91944233fcc2,
         type: 2}
       propertyPath: doorToActivate
       value: 
       objectReference: {fileID: 1701256504}
+    - target: {fileID: 61662489158637328, guid: 3e4f5a56882fedf4bb3a91944233fcc2,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: -0.10144746
+      objectReference: {fileID: 0}
+    - target: {fileID: 61662489158637328, guid: 3e4f5a56882fedf4bb3a91944233fcc2,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 2.1106966
+      objectReference: {fileID: 0}
+    - target: {fileID: 61278080210666402, guid: 3e4f5a56882fedf4bb3a91944233fcc2,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: -0.15989876
+      objectReference: {fileID: 0}
+    - target: {fileID: 61278080210666402, guid: 3e4f5a56882fedf4bb3a91944233fcc2,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 2.3059082
+      objectReference: {fileID: 0}
+    - target: {fileID: 61586128100747412, guid: 3e4f5a56882fedf4bb3a91944233fcc2,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: -0.0914197
+      objectReference: {fileID: 0}
+    - target: {fileID: 61586128100747412, guid: 3e4f5a56882fedf4bb3a91944233fcc2,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 1.6818624
+      objectReference: {fileID: 0}
+    - target: {fileID: 61298448515093480, guid: 3e4f5a56882fedf4bb3a91944233fcc2,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: 0.22415781
+      objectReference: {fileID: 0}
+    - target: {fileID: 61298448515093480, guid: 3e4f5a56882fedf4bb3a91944233fcc2,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 1.9237223
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e4f5a56882fedf4bb3a91944233fcc2, type: 2}
   m_IsPrefabAsset: 0
