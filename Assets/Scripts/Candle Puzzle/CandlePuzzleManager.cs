@@ -6,6 +6,7 @@ public class CandlePuzzleManager : MonoBehaviour {
 	public int numActivatedCandles = 0;
 	Candle[] m_candles;
 	bool allCandlesActivated = false;
+	public GameObject doorToActivate;
 
 	// Use this for initialization
 	void Start () {
@@ -34,6 +35,7 @@ public class CandlePuzzleManager : MonoBehaviour {
 			{
 				print("All Candles Activated");
 				allCandlesActivated = true;
+				doorToActivate.SetActive(true);
 			}
 		}
 		else

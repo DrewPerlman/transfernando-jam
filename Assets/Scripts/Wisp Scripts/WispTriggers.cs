@@ -10,12 +10,14 @@ public class WispTriggers : MonoBehaviour {
     
     private SpriteRenderer wispAura;
     private Animator anim;
+    private CircleCollider2D circ;
 
     Color m_NewColor;
 
     // Use this for initialization
     void Start ()
     {
+        circ = GetComponent<CircleCollider2D>();
         curState = WispState.WHITE;
         Cursor.visible = false;
         //Set the GameObjects's Color quickly to a set Color(blue)
@@ -30,6 +32,13 @@ public class WispTriggers : MonoBehaviour {
     // Update is called once per frame
     void Update ()
     {
+        if(curState == WispState.FIRE){
+            circ.enabled = true;
+            } else{
+            circ.enabled = false;
+            }
+
+
         if(Input.GetMouseButtonDown(0))
 		{
 			Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -42,9 +51,9 @@ public class WispTriggers : MonoBehaviour {
 				{
 					hit.collider.gameObject.GetComponent<Box>().BurnBox();
 				}
-				else if (curState == WispState.ELECTRIC)
+				else if (curState == WispState.ELECTRIC && hit.collider.CompareTag("destElectric"))
 				{
-
+                    hit.collider.gameObject.GetComponent<Fuseboc>().flipping = ! hit.collider.gameObject.GetComponent<Fuseboc>().flipping;
 				}
 				else if (curState == WispState.FIRE && hit.collider.CompareTag("destCandle"))
 				{

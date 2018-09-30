@@ -14,6 +14,7 @@ TagManager:
   - Witch
   - destCandle
   - button
+  - wispCenter
   layers:
   - Default
   - TransparentFX
@@ -25,7 +26,7 @@ TagManager:
   - 
   - Ground
   - Dest
-  - 
+  - firewall
   - 
   - 
   - 
