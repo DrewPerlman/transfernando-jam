@@ -10,6 +10,7 @@ public class DoorSideBehavior : MonoBehaviour {
     private BoxCollider2D doorCollision;
     
     public bool doorOpen = false;
+    public bool needToPressW = false;
 
     public void OpenDoor()
     {
@@ -43,9 +44,16 @@ public class DoorSideBehavior : MonoBehaviour {
 
     private void OnTriggerStay2D(Collider2D collision)
     {
+        if(needToPressW){
         if (collision.CompareTag("Player") && doorOpen && Input.GetKeyDown(KeyCode.W))
         {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+        } else{
+            if (collision.CompareTag("Player") && doorOpen)
+        {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
         }
     }
 }

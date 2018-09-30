@@ -137,8 +137,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50714333e4d157c47b6122e873821950, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorTransition: 0
   doorOpen: 0
+  needToPressW: 1
 --- !u!212 &212197587826097998
 SpriteRenderer:
   m_ObjectHideFlags: 1

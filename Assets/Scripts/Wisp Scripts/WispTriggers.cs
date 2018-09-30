@@ -100,13 +100,14 @@ public class WispTriggers : MonoBehaviour {
                     curState = WispState.ELECTRIC;
                 }
                 break;*/
-			/*case "destFire":
+			case "destFire":
 				if (curState == WispState.FIRE)
 				{
 					curState = WispState.WHITE;
 					other.GetComponent<Box>().BurnBox();
+                    SetWispStateToWhite();
 				}
-				break;*/
+				break;
 			/*case "destElectric":
                 if (curState == WispState.ELECTRIC)
                 {
