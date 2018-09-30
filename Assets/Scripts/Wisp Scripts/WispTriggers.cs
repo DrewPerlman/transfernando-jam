@@ -37,28 +37,22 @@ public class WispTriggers : MonoBehaviour {
 			RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero, Mathf.Infinity, 1 << LayerMask.NameToLayer("Dest"));
 			if (hit.collider != null)
 			{
-				Debug.Log(hit.collider.gameObject.name);
-				print("HERE2");
+				//Debug.Log(hit.collider.gameObject.name);
 				if (curState == WispState.FIRE && hit.collider.CompareTag("destFire"))
 				{
-					print("HERE");
 					hit.collider.gameObject.GetComponent<Box>().BurnBox();
 				}
 				else if (curState == WispState.ELECTRIC)
 				{
 
 				}
+				else if (curState == WispState.FIRE && hit.collider.CompareTag("destCandle"))
+				{
+					hit.collider.gameObject.GetComponent<Candle>().TryActivate();
+				}
 			}
-			curState = WispState.WHITE;
+			SetWispStateToWhite();
 		}
-
-		if (curState == WispState.WHITE)
-        {
-            wispAura.color = Color.white;
-            anim.SetBool("Fire", false);
-            anim.SetBool("Electricity", false);
-        }
-		
 	}
 
     //for the wisp
@@ -73,6 +67,8 @@ public class WispTriggers : MonoBehaviour {
                 wispAura.color = Color.yellow;
                 anim.SetBool("Electricity", false);
                 anim.SetBool("Fire", true);
+				wispAura.enabled = false;
+				FindObjectOfType<SpriteMask>().enabled = false;
                 break;
             case "srcElectric":
                 curState = WispState.ELECTRIC;
@@ -99,20 +95,28 @@ public class WispTriggers : MonoBehaviour {
 					other.GetComponent<Box>().BurnBox();
 				}
 				break;*/
-			case "destElectric":
+			/*case "destElectric":
                 if (curState == WispState.ELECTRIC)
                 {
                     curState = WispState.ELECTRIC;
                 }
-                break;
+                break;*/
                 //add more test cases here
-			case "destCandle":
+			/*case "destCandle":
 				if (curState == WispState.FIRE)
 				{
 					other.GetComponent<Candle>().TryActivate();
 				}
-				break;
+				break;*/
         }
-
     }
+	void SetWispStateToWhite()
+	{
+		curState = WispState.WHITE;
+		wispAura.color = Color.white;
+		anim.SetBool("Fire", false);
+		anim.SetBool("Electricity", false);
+		wispAura.enabled = true;
+		FindObjectOfType<SpriteMask>().enabled = true;
+	}
 }
