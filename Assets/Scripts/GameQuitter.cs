@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class GameQuitter : MonoBehaviour {
 
-	float maxTimer = 3f;
+	float maxTimer = 1.5f;
 	float timer = 0f;
 
 	// Use this for initialization
