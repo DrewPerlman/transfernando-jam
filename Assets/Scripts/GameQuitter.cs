@@ -21,7 +21,7 @@ public class GameQuitter : MonoBehaviour {
 				timer += Time.deltaTime;
 			}
 
-		if(timer == maxTimer){
+		if(timer >= maxTimer){
 			Application.Quit();
 		}
 
