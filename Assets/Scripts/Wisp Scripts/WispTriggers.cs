@@ -80,6 +80,10 @@ public class WispTriggers : MonoBehaviour {
 				{
 					hit.collider.gameObject.GetComponent<Candle>().TryActivate();
 				}
+				else if (curState == WispState.WHITE && hit.collider.CompareTag("destFernando"))
+				{
+					hit.collider.gameObject.GetComponent<Fernando>().TurnToFernando();
+				}
 			}
 			SetWispStateToWhite();
 		}

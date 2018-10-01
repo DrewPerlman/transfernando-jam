@@ -15,6 +15,7 @@ TagManager:
   - destCandle
   - button
   - wispCenter
+  - destFernando
   layers:
   - Default
   - TransparentFX
