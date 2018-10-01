@@ -45,6 +45,7 @@ public class Fernando : MonoBehaviour {
 			FindObjectOfType<MaskBehavior>().hasHugged = true;
 			FindObjectOfType<AudioSource>().clip = lastSong;
 			FindObjectOfType<AudioSource>().Play();
+			FindObjectOfType<AudioSource>().loop = false;
 		}
 	}
 }
