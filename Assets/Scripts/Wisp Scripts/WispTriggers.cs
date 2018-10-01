@@ -49,10 +49,12 @@ public class WispTriggers : MonoBehaviour {
         {
             //catches on fire, cannot go to the bottom of the screen
 
-            Vector3 pos = transform.localPosition;
-            if (pos.y<= 0.10f)
-                pos.y = 0.2f;
-            transform.localPosition = pos;
+            Vector3 pos = transform.position;
+            if (pos.y <= 0.5f)
+            {
+                pos.y = 0.5f;
+                transform.position = pos;
+            }
         }
 
 
