@@ -11,7 +11,7 @@ public class Fuseboc : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		FindObjectOfType<musicScr>().GetComponent<AudioSource>().clip = switchAudioClip;
-		
+		FindObjectOfType<musicScr>().GetComponent<AudioSource>().Play();
 	}
 	
 	// Update is called once per frame
