@@ -6,9 +6,11 @@ public class Fuseboc : MonoBehaviour {
 
 	public GameObject flipper;
 	public bool flipping = false;
+	public AudioClip switchAudioClip;
 
 	// Use this for initialization
 	void Start () {
+		FindObjectOfType<musicScr>().GetComponent<AudioSource>().clip = switchAudioClip;
 		
 	}
 	
