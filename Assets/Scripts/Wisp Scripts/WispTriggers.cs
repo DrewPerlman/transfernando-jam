@@ -37,6 +37,8 @@ public class WispTriggers : MonoBehaviour {
         anim = GetComponent<Animator>();
     }
 
+
+ public GameObject switchSound;
     // Update is called once per frame
     void Update ()
     {
@@ -57,7 +59,6 @@ public class WispTriggers : MonoBehaviour {
             }
         }
 
-
         if (Input.GetMouseButtonDown(0))
 		{
 			Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -73,6 +74,7 @@ public class WispTriggers : MonoBehaviour {
 				else if (curState == WispState.ELECTRIC && hit.collider.CompareTag("destElectric"))
 				{
                     hit.collider.gameObject.GetComponent<Fuseboc>().flipping = ! hit.collider.gameObject.GetComponent<Fuseboc>().flipping;
+                    Instantiate(switchSound,transform.position,Quaternion.identity);
 					SetWispStateToWhite();
 					test = false;
 				}
@@ -88,6 +90,9 @@ public class WispTriggers : MonoBehaviour {
 			SetWispStateToWhite();
 		}
 	}
+
+
+   
 
     //for the wisp
     //other is the candle
@@ -155,9 +160,7 @@ public class WispTriggers : MonoBehaviour {
 			/*case "destElectric":
                 if (curState == WispState.ELECTRIC)
                 {
-                    other.gameObject.GetComponent<Fuseboc>().flipping=true;
-                    SetWispStateToWhite();
-                    test = false;
+
                 }
                 break;*/
                 //add more test cases here

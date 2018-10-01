@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Box : MonoBehaviour {
 	Animator burnBoxAnimator;
+	public GameObject burnboxSound;
 
 	// Use this for initialization
 	void Start () {
@@ -17,5 +18,6 @@ public class Box : MonoBehaviour {
 		GetComponent<BoxCollider2D>().enabled = false;
 		burnBoxAnimator.gameObject.GetComponent<SpriteRenderer>().enabled = true;
 		burnBoxAnimator.SetTrigger("Burn");
+		Instantiate(burnboxSound,transform.position,Quaternion.identity);
 	}
 }

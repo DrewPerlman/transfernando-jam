@@ -19,7 +19,7 @@ public class Fernando : MonoBehaviour {
 
 	void Update()
 	{
-		if (FindObjectOfType<MaskBehavior>().hasHugged && !FindObjectOfType<AudioSource>().isPlaying)
+		if (FindObjectOfType<MaskBehavior>().hasHugged && FindObjectOfType<AudioSource>().time >= 7f)
 		{
 			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 		}
@@ -44,6 +44,8 @@ public class Fernando : MonoBehaviour {
 			FindObjectOfType<MaskBehavior>().hasFernandoed = false;
 			FindObjectOfType<MaskBehavior>().hasHugged = true;
 			FindObjectOfType<AudioSource>().clip = lastSong;
+			GameObject.Find("MusicDimr").GetComponent<MusicDimr>().active = false;
+			FindObjectOfType<AudioSource>().volume = 1.0f;
 			FindObjectOfType<AudioSource>().Play();
 			FindObjectOfType<AudioSource>().loop = false;
 		}

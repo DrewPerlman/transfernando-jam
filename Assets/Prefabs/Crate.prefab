@@ -156,6 +156,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cbe7e3c769075e46a063f6e748684d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  burnboxSound: {fileID: 1249873328019672, guid: 477f4b7770426454c83ef56f8060c0b6,
+    type: 2}
 --- !u!212 &212407506540175596
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -7,6 +7,7 @@ public class Candle : MonoBehaviour {
 	bool isActivated = false;
 	CandlePuzzleManager m_candlePuzzleManager;
 	SpriteRenderer m_childFlameSprite;
+	public GameObject flameSound;
 
 	// Use this for initialization
 	void Start () {
@@ -30,6 +31,9 @@ public class Candle : MonoBehaviour {
 
 	public void ChangeIsActivated(bool activate)
 	{
+		if(activate){
+			Instantiate(flameSound,transform.position,Quaternion.identity);
+		}
 		isActivated = activate;
 	}
 
