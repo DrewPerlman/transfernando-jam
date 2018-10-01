@@ -152,6 +152,17 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 212034539613925642, guid: a3526327cbd4abb4a9705edcdc776311,
+        type: 2}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212034539613925642, guid: a3526327cbd4abb4a9705edcdc776311,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b90335c0c7ffe5d46af3d5ea627cb263,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3526327cbd4abb4a9705edcdc776311, type: 2}
   m_IsPrefabAsset: 0
@@ -572,6 +583,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ff6a5d7d63b97348afda298dfd3aa7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hasFernandoed: 0
+  hasHugged: 0
 --- !u!331 &635772916
 SpriteMask:
   m_ObjectHideFlags: 0
@@ -983,6 +996,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ff6a5d7d63b97348afda298dfd3aa7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hasFernandoed: 0
+  hasHugged: 0
 --- !u!331 &1400463166
 SpriteMask:
   m_ObjectHideFlags: 0
@@ -1069,6 +1084,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ff6a5d7d63b97348afda298dfd3aa7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hasFernandoed: 0
+  hasHugged: 0
 --- !u!331 &1482918138
 SpriteMask:
   m_ObjectHideFlags: 0
